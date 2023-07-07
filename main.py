@@ -10,7 +10,10 @@ from functools import wraps
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 from flask_gravatar import Gravatar
 import os
+from dotenv import load_dotenv
 import random
+
+load_dotenv()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
